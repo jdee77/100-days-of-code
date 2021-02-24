@@ -1,0 +1,17 @@
+01. algorithm lcs(str1, str2, m, n):
+02. // function lcs(string, string, integer, integer) will return the length of largest coommmon subsequence
+03. // between two strings str1 & str2 of length m, n respectively.
+04. {
+05.     M[m + 1, n + 1] //create a martix of size m+1 and  n+1 to store the intermediate value.
+06.     for i:= 0 to m:
+07.         M[i, 0] = 0;      //if size of any string is 0 then lcs = 0
+08.     for i:= 0 to n:
+09.         M[0, i] = 0;      //if size of any string is 0 then lcs = 0
+10.     for i:= 1 to m:
+11.         for j:= 1 to n:
+12.             if str1[i-1] == str2[j-1]
+13.                 M[i][j] = 1 + M[i-1][j-1];
+14.             else
+15.                 M[i][j] = max(M[i-1][j], M[i][j-1]);
+16. return M[m][n];
+17. }
