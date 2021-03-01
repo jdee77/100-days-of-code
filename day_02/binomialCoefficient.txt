@@ -14,4 +14,4 @@ can be simplified as number of ways of choosing k element subsets from n element
 10.	}
 
 time complexity O(n * k)
-space complexity O(n * k)
+space complexity O(n * k).
